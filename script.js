@@ -19,15 +19,6 @@ if (hamburger && navMenu) {
     });
 }
 
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-menu a').forEach(n => {
-    n.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
-
-
  // Form submission handling
 const contactForm = document.getElementById('contactForm');
 
@@ -143,35 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-.hamburger {
-    background: transparent;
-    border: none;
-    padding: 8px;
-}
-
-.hamburger:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
-}
-
-/* Small-screen overflow protection */
-@media (max-width: 480px) {
-    .contact-link span,
-    .contact-item p {
-        overflow-wrap: anywhere;
-    }
-
-    .contact-grid > *,
-    .about-content-modern > * {
-        min-width: 0;
-    }
-
-    .profile-card {
-        width: 100%;
-        min-width: 0;
-    }
-}
 
 /* Contact form labels and information */
 .form-group label {
